@@ -233,7 +233,7 @@ $$ T(n)  =  \left\{
 \end{aligned}
 \right.$$
 
-
+因此其时间复杂度为T(n) = θ(nlgn)
 
 
 

@@ -390,6 +390,8 @@ static class Node<K,V> implements Map.Entry<K,V> {
 ```
 
 ### 插入对象到散列
+![img.png](image/HashMap.put方法流程图.png)
+
 HashMap使用put(K key, V value)方法插入数据，如果初始HashMap中table属性为空或长度为0，会通过resize()方法初始化HashMap，查找一级散列
 到槽位的函数为h = (n - 1) & hash. n为table属性的长度，hash为key的hash值。通过散列函数h获取对应槽位的链表，如果链表为空，则将当前插入
 数据构建链表放入槽位；如果槽位对应链表不为空，则遍历链表找到空位插入当前待插入数据构建的链表。如果链表长度超过8则将链表转为红黑树
